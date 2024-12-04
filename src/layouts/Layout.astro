@@ -1,3 +1,7 @@
+---
+import '@fontsource/space-grotesk';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -7,16 +11,9 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Pricing plan</title>
 	</head>
-	<body>
-		<slot />
+	<body class="min-h-screen flex flex-col bg-[#030b25] antialiased">
+		<main class="max-w-5xl mx-auto">
+			<slot />
+		</main>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
