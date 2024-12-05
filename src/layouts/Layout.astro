@@ -12,7 +12,9 @@ import '@fontsource/space-grotesk';
 		<title>Pricing plan</title>
 	</head>
 	<body class="min-h-screen flex flex-col bg-[#030b25] antialiased">
-		<main class="max-w-6xl mx-auto flex flex-col items-center justify-center">
+		<main class="relative max-w-6xl mx-auto flex flex-col items-center justify-center">
+			<div class="absolute w-full h-52 top-[200px] left-[-800px] rotate-[-130deg] bg-[#1240c5]/60 rounded-full blur-[150px]"/>
+			<div class="absolute w-full h-52 top-0 left-[-100px] rotate-[-130deg] bg-[#1240c5]/60 rounded-full blur-[150px]"/>
 			<slot />
 		</main>
 	</body>

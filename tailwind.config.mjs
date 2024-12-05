@@ -11,6 +11,7 @@ export default {
       backgroundImage: {
         "text-gradient":
           "linear-gradient(90deg, #7CACFF 0%, #5280D1 36%, #88B3FD 66%)",
+        "card-most-popular": "url('/public/pattern.svg')",
       },
     },
   },
@@ -22,19 +23,19 @@ export default {
           "@apply bg-gradient-to-b from-[#052B90] to-[#031953]": {},
         },
         ".btn": {
-          "@apply w-full py-2 border border-[#FFFFFF]/40 text-[#FFFFFF] text-lg font-bold bg-gradient-to-b from-[#0A308B] to-[#1E6EFB] rounded-lg":
+          "@apply w-full text-center py-2 border border-[#FFFFFF]/40 text-[#FFFFFF] text-lg font-bold bg-gradient-to-b from-[#0A308B] to-[#1E6EFB] rounded-lg":
             {},
         },
         ".btn-ghost": {
-          "@apply w-full py-2 border border-[#FFFFFF]/40 text-[#FFFFFF] text-lg font-bold bg-transparent rounded-lg":
+          "@apply w-full text-center py-2 border border-[#FFFFFF]/40 text-[#FFFFFF] text-lg font-bold bg-transparent rounded-lg":
             {},
         },
         ".card": {
-          "@apply h-fit border border-[#E7EBFF] text-[#FFFFFF] rounded-2xl p-[31px] bg-gradient-to-t from-[#031953] to-[#1770F7]":
+          "@apply h-fit border border-[#E7EBFF] text-[#FFFFFF] rounded-2xl p-8 bg-gradient-to-t from-[#031953] to-[#1770F7]":
             {},
         },
-        ".card-ultime": {
-          "@apply h-fit border border-[#E7EBFF] text-[#FFFFFF] rounded-2xl p-[33px]":
+        ".card-most-popular": {
+          "@apply h-fit border border-[#E7EBFF] text-[#FFFFFF] rounded-2xl p-8 bg-card-most-popular bg-cover bg-blue-300":
             {},
         },
       });
