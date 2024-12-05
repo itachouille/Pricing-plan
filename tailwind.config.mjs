@@ -22,15 +22,19 @@ export default {
           "@apply bg-gradient-to-b from-[#052B90] to-[#031953]": {},
         },
         ".btn": {
-          "@apply border border-[#FFFFFF]/40 text-[#FFFFFF] text-lg font-bold bg-gradient-to-b from-[#0A308B] to-[#1E6EFB] w-[275px] h-[45px] rounded-lg":
+          "@apply w-full py-2 border border-[#FFFFFF]/40 text-[#FFFFFF] text-lg font-bold bg-gradient-to-b from-[#0A308B] to-[#1E6EFB] rounded-lg":
             {},
         },
         ".btn-ghost": {
-          "@apply border border-[#FFFFFF]/40 text-[#FFFFFF] text-lg font-bold bg-transparent w-[275px] h-[45px] rounded-lg":
+          "@apply w-full py-2 border border-[#FFFFFF]/40 text-[#FFFFFF] text-lg font-bold bg-transparent rounded-lg":
             {},
         },
         ".card": {
-          "@apply border border-[#E7EBFF] text-[#FFFFFF] rounded-lg p-[30px] bg-gradient-to-t from-[#031953] to-[#1770F7]":
+          "@apply h-fit border border-[#E7EBFF] text-[#FFFFFF] rounded-2xl p-[31px] bg-gradient-to-t from-[#031953] to-[#1770F7]":
+            {},
+        },
+        ".card-ultime": {
+          "@apply h-fit border border-[#E7EBFF] text-[#FFFFFF] rounded-2xl p-[33px]":
             {},
         },
       });

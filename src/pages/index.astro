@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Button from "../components/Button.tsx"
-import Card from "../components/Card.tsx"
+import { PRICING_PLAN } from '../data';
 ---
 
 <Layout>
@@ -13,28 +13,32 @@ import Card from "../components/Card.tsx"
 	<h1 class="text-center text-white text-5xl font-bold">Des prix en accord avec<br/>
 		<span class="text-transparent bg-clip-text bg-gradient-to-r from-[#88B3FD] to-[#043BCB]">notre vision</span>
 	</h1>
-	<div class="my-10 flex gap-5">
+	<div class="mt-8 flex gap-5">
 		<Button variant="btn" label="Paiement Mensuel" />
 		<Button variant="btn-ghost" label="Paiement Annuel (-20%)" />
 	</div>
-	<div class="flex items-center justify-between w-full gap-6">
-		<Card   icon='./bullseye-arrow.svg'
-		title='Essentiel'
-		price={179}
-		list={["+2500 vues/mois", "+60 clics sur votre site", "+15 appels/mois", "+15 demandes d'itinéraires", "Plus de visibilité sur Google"]} 
-		text="Réponse aux avis google inclus"/>
-
-		<Card   icon='./gem.svg'
-		title='Ultime'
-		badge='Best offer'
-		price={439}
-		list={["+6500 vues/mois", "+200 clics sur votre site", "+40 appels/mois", "+40 demandes d'itinéraires", "Plus de visibilité sur Google", "Réponse aux avis google inclus", "1 shooting", "QR code personnalisé"]}
-		/>
-
-		<Card   icon='./bullseye-arrow.svg'
-		title='Prenium'
-		price={319}
-		list={["+11 000 vues/mois", "+500 clics sur votre site", "+80 appels/mois", "+80 demandes d'itinéraires", "Plus de visibilité sur Google","Réponse aux avis google inclus", "1 shooting"]}
-		/>
+	<div class="mx-auto grid max-w-7xl gap-12 lg:gap-8 py-24 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
+		{PRICING_PLAN.map((plan) => (
+			<div class="card">
+				<img src={plan.icon} alt={plan.title}/>
+				<div class="flex">
+					<h3>{plan.title}</h3>
+					{plan.mostPopular && <span>Best offer</span>}
+				</div>
+				<p>${plan.price} /mounth</p>
+				<img src="/line.svg" alt="line">
+				<ul>
+					{plan.features.map((feature) => (
+						<li class="flex">
+							<img src="./check.svg" alt="check icon">
+							{feature}
+						</li>
+					))
+					}
+				</ul>
+				{plan.description && <p>{plan.description}</p>}
+				<a href="#" class="btn">{plan.cta}</a>
+			</div>
+		))}
 	</div>
 </Layout>

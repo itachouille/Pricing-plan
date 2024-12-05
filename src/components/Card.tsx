@@ -12,28 +12,40 @@ interface CardProps {
 const Card = ({ icon, title, price, list, text, badge }: CardProps) => {
   return (
     <div className="card">
-      <div className="w-[46px] h-[46px] border border-white flex justify-center">
-        <img src={icon} alt="icon" width={26} height={26} />
+      <img src={icon} alt="icon" width={46} height={46} />
+      <div className="pt-4">
+        <span className="align-middle font-bold text-3xl">{title}</span>
+        {badge && (
+          <span className="font-normal px-2 py-1 rounded text-sm bg-white/20 border border-white ml-2">
+            {badge}
+          </span>
+        )}
       </div>
-      <div>
-        <span className="font-medium text-[33px]">{title}</span>
-        {badge}
+      <div className="my-6">
+        <span className="text-4xl font-bold">${price}</span>
+        <span className="text-base"> /month</span>
       </div>
-      <div className="">${price} /month</div>
-      <div className="mx-auto w-2/4 h-0.5 bg-white" />
-      <div>
-        <ul>
-          {list.map((item, index) => (
-            <li className="flex" key={index}>
-              <img src="./check.svg" alt="check icon" />
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div>{text}</div>
 
-      <Button variant="btn" label="Je m'abonne" />
+      <img src="./line.svg" alt="line" />
+
+      <ul className="mt-6">
+        {list.map((item, index) => (
+          <li className="flex gap-2 my-3" key={index}>
+            <img src="./check.svg" alt="check icon" />
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+
+      <span>{text}</span>
+
+      <div className="mt-7">
+        {title === "Ultime" ? (
+          <Button variant="btn" label="Je m'abonne" />
+        ) : (
+          <Button variant="btn-ghost" label="Je m'abonne" />
+        )}
+      </div>
     </div>
   );
 };
