@@ -1,5 +1,6 @@
 ---
 import '@fontsource/space-grotesk';
+import { Spotlight } from '../components/Spotlight';
 ---
 
 <!doctype html>
@@ -11,10 +12,12 @@ import '@fontsource/space-grotesk';
 		<meta name="generator" content={Astro.generator} />
 		<title>Pricing plan</title>
 	</head>
-	<body class="min-h-screen flex flex-col bg-[#030b25] antialiased">
-		<main class="relative max-w-6xl mx-auto flex flex-col items-center justify-center">
-			<div class="absolute w-full h-52 top-[200px] left-[-800px] rotate-[-130deg] bg-[#1240c5]/60 rounded-full blur-[150px]"/>
-			<div class="absolute w-full h-52 top-0 left-[-100px] rotate-[-130deg] bg-[#1240c5]/60 rounded-full blur-[150px]"/>
+	<body class="relative flex flex-col bg-[#030b25]">
+		<main class="w-screen h-screen mx-auto flex flex-col items-center">
+			<div class="absolute h-full w-full antialiased overflow-hidden -z-50">
+				<Spotlight className="absolute hidden lg:block top-0 left-[50%] animate-spotlight pointer-events-none h-[169%] w-[138%] opacity-0"/>
+				<Spotlight className="absolute hidden lg:block top-14 left-[-10%] animate-spotlight pointer-events-none  h-[169%] w-[138%] opacity-0"/>
+			</div>
 			<slot />
 		</main>
 	</body>

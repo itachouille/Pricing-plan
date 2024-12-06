@@ -13,6 +13,21 @@ export default {
           "linear-gradient(90deg, #7CACFF 0%, #5280D1 36%, #88B3FD 66%)",
         "card-most-popular": "url('/public/pattern.svg')",
       },
+      animation: {
+        spotlight: "spotlight 2s ease 0.25s 1 forwards",
+      },
+      keyframes: {
+        spotlight: {
+          "0%": {
+            opacity: 0,
+            transform: "translate(-72%, -62%) scale(0.5)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translate(-50%,-40%) scale(1)",
+          },
+        },
+      },
     },
   },
   plugins: [
