@@ -55,15 +55,16 @@ export default {
             {},
         },
         ".card": {
-          "@apply h-fit min-w-[350px] border border-[#E7EBFF] text-[#FFFFFF] rounded-2xl p-8 bg-gradient-to-t from-[#031953] to-[#1770F7]":
+          "@apply h-fit min-w-[350px] border border-[#E7EBFF] text-[#FFFFFF] rounded-2xl p-8 bg-gradient-to-t from-[#031953] to-[#1770F7] animate-fade-up animate-once animate-ease-linear":
             {},
         },
         ".card-most-popular": {
-          "@apply border border-[#E7EBFF] text-[#FFFFFF] rounded-2xl p-8 bg-card-most-popular bg-cover bg-[#A3D7FD]":
+          "@apply border border-[#E7EBFF] text-[#FFFFFF] rounded-2xl p-8 bg-card-most-popular bg-cover bg-[#A3D7FD] animate-fade-down animate-once animate-ease-linear":
             {},
         },
       });
       addUtilities({});
     }),
+    require("tailwindcss-animated"),
   ],
 };
