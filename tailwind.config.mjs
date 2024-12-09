@@ -14,7 +14,6 @@ export default {
           "linear-gradient(90deg, #7CACFF 0%, #5280D1 36%, #88B3FD 66%)",
       },
       animation: {
-        borderSpin: "borderSpin 7s linear infinite",
         spotlight: "spotlight 2s ease 0.25s 1 forwards",
       },
       keyframes: {
