@@ -9,11 +9,12 @@ export default {
         sans: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
+        "card-most-popular": "url('/public/pattern.svg')",
         "text-gradient":
           "linear-gradient(90deg, #7CACFF 0%, #5280D1 36%, #88B3FD 66%)",
-        "card-most-popular": "url('/public/pattern.svg')",
       },
       animation: {
+        borderSpin: "borderSpin 7s linear infinite",
         spotlight: "spotlight 2s ease 0.25s 1 forwards",
       },
       keyframes: {
@@ -38,19 +39,19 @@ export default {
           "@apply bg-gradient-to-b from-[#052B90] to-[#031953]": {},
         },
         ".btn": {
-          "@apply w-full text-center py-2 border border-[#FFFFFF]/40 text-[#FFFFFF] text-lg font-bold bg-gradient-to-b from-[#0A308B] to-[#1E6EFB] rounded-lg":
+          "@apply w-full text-center py-2 bg-gradient-to-b from-[#0A308B] to-[#1E6EFB] border border-[#FFFFFF]/80 text-[#FFFFFF] rounded-lg":
             {},
         },
         ".btn-ghost": {
-          "@apply w-full text-center py-2 border border-[#FFFFFF]/40 text-[#FFFFFF] text-lg font-bold bg-transparent rounded-lg":
+          "@apply w-full text-center py-2 border border-[#FFFFFF]/80 text-[#FFFFFF] bg-transparent rounded-lg":
             {},
         },
         ".card": {
-          "@apply h-fit border border-[#E7EBFF] text-[#FFFFFF] rounded-2xl p-8 bg-gradient-to-t from-[#031953] to-[#1770F7]":
+          "@apply h-fit min-w-[350px] border border-[#E7EBFF] text-[#FFFFFF] rounded-2xl p-8 bg-gradient-to-t from-[#031953] to-[#1770F7]":
             {},
         },
         ".card-most-popular": {
-          "@apply h-fit border border-[#E7EBFF] text-[#FFFFFF] rounded-2xl p-8 bg-card-most-popular bg-cover bg-blue-300":
+          "@apply border border-[#E7EBFF] text-[#FFFFFF] rounded-2xl p-8 bg-card-most-popular bg-cover bg-[#A3D7FD]":
             {},
         },
       });
