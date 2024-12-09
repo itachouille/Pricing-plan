@@ -38,12 +38,20 @@ export default {
         ".link": {
           "@apply bg-gradient-to-b from-[#052B90] to-[#031953]": {},
         },
+        ".btn-active": {
+          "@apply w-[300px] transition-all duration-200 px-10 py-2 border border-[#FFFFFF]/40 text-[#FFFFFF] text-lg font-medium bg-gradient-to-b from-[#0A308B] to-[#1E6EFB] rounded-lg":
+            {},
+        },
+        ".btn-inactive": {
+          "@apply w-[300px] hover:scale-105 transition-all duration-200 px-10 py-2 border border-[#FFFFFF]/40 text-[#FFFFFF] text-lg font-medium bg-transparent rounded-lg":
+            {},
+        },
         ".btn": {
-          "@apply w-full text-center py-2 bg-gradient-to-b from-[#0A308B] to-[#1E6EFB] border border-[#FFFFFF]/80 text-[#FFFFFF] rounded-lg":
+          "@apply w-full text-center hover:scale-105 transition-all duration-200 py-2 bg-gradient-to-b from-[#0A308B] to-[#1E6EFB] border border-[#FFFFFF]/80 text-[#FFFFFF] rounded-lg":
             {},
         },
         ".btn-ghost": {
-          "@apply w-full text-center py-2 border border-[#FFFFFF]/80 text-[#FFFFFF] bg-transparent rounded-lg":
+          "@apply w-full text-center hover:scale-105 transition-all duration-200 py-2 border border-[#FFFFFF]/80 text-[#FFFFFF] bg-transparent rounded-lg":
             {},
         },
         ".card": {

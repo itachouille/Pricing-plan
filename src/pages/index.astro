@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { PRICING_PLAN } from '../data';
+import SubscriptionButton from '../components/SubscriptionButton';
 ---
 
 <Layout>
@@ -10,10 +11,7 @@ import { PRICING_PLAN } from '../data';
 	<h1 class="text-center mt-4 leading-snug text-white text-4xl lg:text-5xl font-bold">Des prix en accord avec<br/>
 		<span class="text-transparent bg-clip-text bg-gradient-to-r from-[#88B3FD] to-[#043BCB] font-bold">notre vision</span>
 	</h1>
-	<div class="flex flex-col gap-5 mt-6 lg:flex-row">
-		<a href="#" class="flex items-center justify-center px-12 py-2 border border-[#FFFFFF]/40 text-[#FFFFFF] text-lg font-medium bg-gradient-to-b from-[#0A308B] to-[#1E6EFB] rounded-lg">Paiement Mensuel</a>
-		<a href="#" class="flex items-center justify-center px-10 py-2 border border-[#FFFFFF]/40 text-[#FFFFFF] text-lg font-medium bg-transparent rounded-lg">Paiement Annuel (-20%)</a>
-	</div>
+	<SubscriptionButton client:load/>
 	<div class="flex flex-col lg:flex-row gap-6 mt-8">
 		{PRICING_PLAN.map((plan) => (
 			  <div class={plan.mostPopular ? "card-most-popular" : "card"}>
@@ -37,7 +35,7 @@ import { PRICING_PLAN } from '../data';
 					<div class="flex mt-8">
 						<a href="#" class={plan.mostPopular ? "btn" : "btn-ghost"}>{plan.cta}</a>
 					</div>
-				</div>
+			</div>
 		))}
 	</div>
 </Layout>
