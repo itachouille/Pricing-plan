@@ -8,7 +8,7 @@ const SubscriptionButton = () => {
   }
 
   return (
-    <div className="flex flex-col gap-5 mt-6 lg:flex-row">
+    <div className="mt-6 flex flex-col gap-5 lg:flex-row">
       <button
         onClick={handleSubscription}
         className={isAnnual ? "btn-inactive" : "btn-active"}
